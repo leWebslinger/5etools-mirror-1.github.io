@@ -1,0 +1,33 @@
+{
+  "manifestVersion": 1,
+  "name": "5e_TaleTools",
+  "summary": "5e at a glance",
+  "version": "0.0.1",
+  "entryPoint": "/index.html",
+  "api": {
+    "version": "0.1",
+    "initTimeout": 1,
+    "subscriptions": {
+      "symbiote": {
+        "onStateChangeEvent": "onStateChangeEvent",
+        "onRollResults": "handleRollResult"
+      }
+    }
+  },
+  "controls": {
+    "tabs": true,
+    "navigation": true,
+    "reload": true
+  },
+  "environment": {
+    "capabilities": [
+      "runInBackground"
+    ],
+    "extras": [
+      "/js/5e_TaleTools.js",
+      "/js/dice_finder_optional_configuration.js",
+      "diceFinder"
+    ],
+    "webViewBackgroundColor": "#000"
+  }  
+}
